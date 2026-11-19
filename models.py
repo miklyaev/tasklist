@@ -10,3 +10,8 @@ class Task(Base):
   id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
   title: Mapped[str] = mapped_column(String, nullable=False)
   done: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
+
+
+class TaskUpdate(BaseModel):
+    title: str | None = None
+    done: bool | None = None
