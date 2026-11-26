@@ -16,3 +16,8 @@ class UserRepository:
       self.db.commit()
       self.db.refresh(user)
       return user
+
+  def get_by_id(self, user_id: int) -> models.User | None:
+      return self.db.get(models.User, user_id)
+
+

@@ -6,5 +6,7 @@ alembic
 pydantic-settings
 bcrypt
 pydantic[email]
+python-jose[cryptography]
+
 
 
